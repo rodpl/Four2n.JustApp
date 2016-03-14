@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "description": "Four2n.JustApp.DataAccess.EF6 Class Library",
+  "authors": [ "Z8XDD" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+    "frameworks": {
+        "net451": { }
+    },
+    "dependencies": {
+        "EntityFramework": "6.1.3",
+        "Four2n.JustApp.Domain": "1.0.0-*"
+    }
+}

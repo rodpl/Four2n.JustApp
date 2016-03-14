@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{79B0ABF3-0906-4603-840C-8B904200F298}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2948C2F3-5894-4943-9A00-AC51FC777C7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EEF12AB2-F109-4598-BE57-BDEE008AB24F}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Four2n.JustApp.UI.Web", "src\Four2n.JustApp.UI.Web\Four2n.JustApp.UI.Web.xproj", "{A03A703A-19C9-43D1-BD77-A8178CC0CC9E}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Four2n.JustApp.DataAccess.EF6", "src\Four2n.JustApp.DataAccess.EF6\Four2n.JustApp.DataAccess.EF6.xproj", "{E273623A-7628-4523-B28B-6FC1CF46EBC8}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Four2n.JustApp.Domain", "src\Four2n.JustApp.Domain\Four2n.JustApp.Domain.xproj", "{F95F65AE-E348-48DA-ADF5-BCBB0BA03E16}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Four2n.JustApp.DataAccess.EF7", "src\Four2n.JustApp.DataAccess.EF7\Four2n.JustApp.DataAccess.EF7.xproj", "{77EB4EBE-F715-4974-8097-3D91070F8D86}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Four2n.DataAccess.IntegrationTests", "test\Four2n.DataAccess.IntegrationTests\Four2n.DataAccess.IntegrationTests.xproj", "{3DB3EC86-8940-4C5E-8CDA-97E3EA1AE551}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A03A703A-19C9-43D1-BD77-A8178CC0CC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A03A703A-19C9-43D1-BD77-A8178CC0CC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A03A703A-19C9-43D1-BD77-A8178CC0CC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A03A703A-19C9-43D1-BD77-A8178CC0CC9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E273623A-7628-4523-B28B-6FC1CF46EBC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E273623A-7628-4523-B28B-6FC1CF46EBC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E273623A-7628-4523-B28B-6FC1CF46EBC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E273623A-7628-4523-B28B-6FC1CF46EBC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F95F65AE-E348-48DA-ADF5-BCBB0BA03E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F95F65AE-E348-48DA-ADF5-BCBB0BA03E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F95F65AE-E348-48DA-ADF5-BCBB0BA03E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F95F65AE-E348-48DA-ADF5-BCBB0BA03E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77EB4EBE-F715-4974-8097-3D91070F8D86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77EB4EBE-F715-4974-8097-3D91070F8D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77EB4EBE-F715-4974-8097-3D91070F8D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77EB4EBE-F715-4974-8097-3D91070F8D86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB3EC86-8940-4C5E-8CDA-97E3EA1AE551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB3EC86-8940-4C5E-8CDA-97E3EA1AE551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB3EC86-8940-4C5E-8CDA-97E3EA1AE551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB3EC86-8940-4C5E-8CDA-97E3EA1AE551}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A03A703A-19C9-43D1-BD77-A8178CC0CC9E} = {79B0ABF3-0906-4603-840C-8B904200F298}
+		{E273623A-7628-4523-B28B-6FC1CF46EBC8} = {79B0ABF3-0906-4603-840C-8B904200F298}
+		{F95F65AE-E348-48DA-ADF5-BCBB0BA03E16} = {79B0ABF3-0906-4603-840C-8B904200F298}
+		{77EB4EBE-F715-4974-8097-3D91070F8D86} = {79B0ABF3-0906-4603-840C-8B904200F298}
+		{3DB3EC86-8940-4C5E-8CDA-97E3EA1AE551} = {2948C2F3-5894-4943-9A00-AC51FC777C7B}
+	EndGlobalSection
+EndGlobal
