@@ -5,7 +5,7 @@ using Four2n.JustApp.DataAccess.EF;
 
 using Xunit;
 
-namespace Four2n.DataAccess.IntegrationTests
+namespace Four2n.JustApp.DataAccess.IntegrationTests
 {
     [Collection("Database collection")]
     public abstract class RollbackFixture : IDisposable

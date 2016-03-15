@@ -2,7 +2,7 @@
 
 using Four2n.JustApp.DataAccess.EF;
 
-namespace Four2n.DataAccess.IntegrationTests
+namespace Four2n.JustApp.DataAccess.IntegrationTests
 {
     public class DatabaseBootstrapFixture : IDisposable
     {

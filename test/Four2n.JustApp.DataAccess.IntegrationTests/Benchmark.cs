@@ -7,13 +7,13 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
+using System.Diagnostics;
+
 using Xunit.Abstractions;
 
-namespace Four2n.DataAccess.IntegrationTests
+namespace Four2n.JustApp.DataAccess.IntegrationTests
 {
-    using global::System;
-    using global::System.Diagnostics;
-
     /// <summary>
     /// Benchmark helper class for measuring performance.
     /// </summary>

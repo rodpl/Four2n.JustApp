@@ -5,7 +5,7 @@ using Four2n.JustApp.Domain.Applications;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Four2n.DataAccess.IntegrationTests.Examples
+namespace Four2n.JustApp.DataAccess.IntegrationTests.Examples
 {
     public class BatchInsertingTests : RollbackFixture
     {

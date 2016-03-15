@@ -1,4 +1,4 @@
-﻿{
+{
     "version": "1.0.0-*",
     "description": "Four2n.DataAccess.IntegrationTests Class Library",
     "authors": [ "Z8XDD" ],
@@ -16,6 +16,7 @@
         }
     },
     "dependencies": {
+        "Four2n.JustApp.Domain": "1.0.0-*",
         "xunit": "2.1.0",
         "xunit.runner.dnx": "2.1.0-rc1-build204"
     },

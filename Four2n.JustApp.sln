@@ -20,7 +20,7 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Four2n.JustApp.Domain", "sr
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Four2n.JustApp.DataAccess.EF7", "src\Four2n.JustApp.DataAccess.EF7\Four2n.JustApp.DataAccess.EF7.xproj", "{77EB4EBE-F715-4974-8097-3D91070F8D86}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Four2n.DataAccess.IntegrationTests", "test\Four2n.DataAccess.IntegrationTests\Four2n.DataAccess.IntegrationTests.xproj", "{3DB3EC86-8940-4C5E-8CDA-97E3EA1AE551}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Four2n.JustApp.DataAccess.IntegrationTests", "test\Four2n.JustApp.DataAccess.IntegrationTests\Four2n.JustApp.DataAccess.IntegrationTests.xproj", "{3DB3EC86-8940-4C5E-8CDA-97E3EA1AE551}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
