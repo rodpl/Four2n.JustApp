@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 
+using Four2n.JustApp.Domain.Applications;
+
 namespace Four2n.JustApp.Domain.Organizational
 {
     public class OrganizationalUnit
@@ -25,5 +27,7 @@ namespace Four2n.JustApp.Domain.Organizational
         public string Name { get; set; }
 
         public IList<OrganizationalUnit> Children { get; set; }
+
+        public IList<ApplicationRental> ApplicationRentals { get; set; }
     }
 }

@@ -1,5 +1,8 @@
-﻿using System.Data.Entity.Migrations;
+﻿using System;
+using System.Data.Entity.Migrations;
+using System.Linq;
 
+using Four2n.JustApp.Domain.Applications;
 using Four2n.JustApp.Domain.Organizational;
 
 namespace Four2n.JustApp.DataAccess.EF
@@ -17,6 +20,8 @@ namespace Four2n.JustApp.DataAccess.EF
         {
             context.Configuration.AutoDetectChangesEnabled = false;
             CreateWorld(context);
+            CreateApplications(context);
+            CreateApplicationRentals(context);
             context.Configuration.AutoDetectChangesEnabled = true;
         }
 
@@ -46,6 +51,38 @@ namespace Four2n.JustApp.DataAccess.EF
                     {
                         world, europe, denmark, hovedstaden, copenhagen, syddanmark, odense, poland,
                         mazowieckie, warsaw, malopolskie, cracow, africa, egipt, southAfrica
+                    });
+        }
+
+        private void CreateApplications(DomainDbContext context)
+        {
+            context.Applications.AddRange(new[] {
+                new Application("Excel"),
+                new Application("GMail"),
+                new Application("Word"),
+                new Application("Facebook"),
+                new Application("GitHub"),
+                new Application("Powerpoint")
+            });
+        }
+
+        private void CreateApplicationRentals(DomainDbContext context)
+        {
+            context.ApplicationRentals.AddRange(
+                new[]
+                    {
+                        new ApplicationRental(
+                            context.Applications.Local.First(x => x.Name == "GMail"),
+                            context.OrganizationalUnits.Local.First(x => x.Name == "World"),
+                            true),
+                        new ApplicationRental(
+                            context.Applications.Local.First(x => x.Name == "Facebook"),
+                            context.OrganizationalUnits.Local.First(x => x.Name == "World"),
+                            true),
+                        new ApplicationRental(
+                            context.Applications.Local.First(x => x.Name == "Facebook"),
+                            context.OrganizationalUnits.Local.First(x => x.Name == "Africa"),
+                            true) { Begins = DateTime.Today.Date.AddYears(1) },
                     });
         }
     }
