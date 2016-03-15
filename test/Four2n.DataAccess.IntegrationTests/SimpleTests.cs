@@ -22,7 +22,7 @@ namespace Four2n.DataAccess.IntegrationTests
         {
             using (var ctx = this.CreateDbContext())
             {
-                ctx.OrganizationalUnits.Add(new OrganizationalUnit { Name = "World" });
+                ctx.OrganizationalUnits.Add(new OrganizationalUnit("World"));
                 ctx.SaveChanges();
             }
         }
