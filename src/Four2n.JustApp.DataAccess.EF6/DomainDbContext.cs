@@ -24,9 +24,15 @@ namespace Four2n.JustApp.DataAccess.EF
 
         public static void Initialize(string connectionString)
         {
+            var initializer =
+                new MigrateDatabaseToLatestVersion<DomainDbContext, DomainDbMigrationsConfiguration>
+                    (true);
+
+            Database.SetInitializer(initializer);
+
             using (var ctx = new DomainDbContext(connectionString))
             {
-                new DomainMigrationDataContextInitializer().InitializeDatabase(ctx);
+                ctx.Database.Initialize(false);
             }
         }
     }

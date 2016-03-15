@@ -18,6 +18,8 @@ namespace Four2n.JustApp.DataAccess.EF
 
         protected override void Seed(DomainDbContext context)
         {
+            if (context.Applications.Any()) return;
+
             context.Configuration.AutoDetectChangesEnabled = false;
             CreateWorld(context);
             CreateApplications(context);
