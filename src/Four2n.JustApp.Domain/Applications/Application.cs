@@ -13,6 +13,7 @@ namespace Four2n.JustApp.Domain.Applications
         public Application(string name)
         {
             this.Name = name;
+            RentedTo = new List<ApplicationRental>();
         }
 
         public long Id { get; set; }

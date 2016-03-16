@@ -131,7 +131,7 @@ namespace Four2n.JustApp.DataAccess.IntegrationTests
     {
         public static Benchmark ToOutput(this Benchmark bench, ITestOutputHelper output, string format)
         {
-            return bench.ToDelegate(o => Debug.WriteLine(format, o));
+            return bench.ToDelegate(o => output.WriteLine(format, o));
         }
     }
 }
