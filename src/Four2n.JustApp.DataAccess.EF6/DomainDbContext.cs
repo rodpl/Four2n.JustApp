@@ -1,4 +1,7 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
+using System.Linq;
+using System.Reflection;
 
 using Four2n.JustApp.Domain.Applications;
 using Four2n.JustApp.Domain.Organizational;
@@ -33,6 +36,25 @@ namespace Four2n.JustApp.DataAccess.EF
             using (var ctx = new DomainDbContext(connectionString))
             {
                 ctx.Database.Initialize(false);
+            }
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            LoadAllEntityTypeConfiguration(modelBuilder);
+            base.OnModelCreating(modelBuilder);
+        }
+
+        private void LoadAllEntityTypeConfiguration(DbModelBuilder modelBuilder)
+        {
+            //Culture is a class defined in the assembly where my Entity models reside
+            var typesToRegister = Assembly.GetAssembly(typeof(DomainDbContext)).GetTypes()
+                .Where(type => type.Namespace.EndsWith(".Mapping"));
+
+            foreach (var type in typesToRegister)
+            {
+                dynamic configurationInstance = Activator.CreateInstance(type);
+                modelBuilder.Configurations.Add(configurationInstance);
             }
         }
     }

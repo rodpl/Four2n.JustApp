@@ -13,14 +13,16 @@ namespace Four2n.JustApp.DataAccess.EF.Mappings
 
         public ApplicationMap()
         {
-            Property(m => m.Name)
+/*            Property(m => m.Name)
                 .IsRequired()
                 .HasMaxLength(300)
                 .HasColumnAnnotation(
                     IndexAnnotation.AnnotationName,
                     new IndexAnnotation(
-                        new IndexAttribute(NameAlternateKeyNameDefinition) { IsUnique = true }));
+                        new IndexAttribute(NameAlternateKeyNameDefinition) { IsUnique = true }));*/
             HasMany(m => m.RentedTo);
+            Property(m => m.BasePrice.Amount);
+            Property(m => m.BasePrice.Currency);
         }
     }
 }

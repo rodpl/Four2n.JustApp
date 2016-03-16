@@ -7,7 +7,7 @@
     <ProjectGuid>{E273623A-7628-4523-B28B-6FC1CF46EBC8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Four2n.JustApp.DataAccess.EF6</RootNamespace>
+    <RootNamespace>Four2n.JustApp.DataAccess.EF</RootNamespace>
     <AssemblyName>Four2n.JustApp.DataAccess.EF6</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -52,6 +52,7 @@
     <Compile Include="DomainDbContext.cs" />
     <Compile Include="DomainDbMigrationsConfiguration.cs" />
     <Compile Include="Mappings\ApplicationMap.cs" />
+    <Compile Include="Mappings\MoneyMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

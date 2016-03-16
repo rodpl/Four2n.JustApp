@@ -11,26 +11,26 @@ namespace Four2n.JustApp.DataAccess.IntegrationTests.Examples
 {
     public class BatchInsertingTests : RollbackFixture
     {
-        private readonly ITestOutputHelper output;
+        private readonly ITestOutputHelper _output;
 
         public BatchInsertingTests(ITestOutputHelper output)
         {
-            this.output = output;
+            this._output = output;
         }
 
-        public class ApplicationRepository
+        private class ApplicationRepository
         {
-            private DomainDbContext dbContext;
+            private readonly DomainDbContext _dbContext;
 
             public ApplicationRepository(DomainDbContext dbContext)
             {
-                this.dbContext = dbContext;
+                this._dbContext = dbContext;
             }
 
             public long Add(Application app)
             {
-                dbContext.Applications.Add(app);
-                dbContext.SaveChanges();
+                _dbContext.Applications.Add(app);
+                _dbContext.SaveChanges();
                 return app.Id;
             }
         }
@@ -61,7 +61,7 @@ namespace Four2n.JustApp.DataAccess.IntegrationTests.Examples
 
             var modelsToAdd = CreateModelsToAdd(batchSize, ctx);
 
-            using (Benchmark.InMiliseconds().ToOutput(output, "Just Add: {0}"))
+            using (Benchmark.InMiliseconds().ToOutput(_output, "Just Add: {0}"))
             {
                 foreach (var application in modelsToAdd)
                 {
@@ -81,7 +81,7 @@ namespace Four2n.JustApp.DataAccess.IntegrationTests.Examples
             var ctx = CreateDbContext();
             var modelsToAdd = CreateModelsToAdd(batchSize, ctx);
 
-            using (Benchmark.InMiliseconds().ToOutput(output, "Just Add: {0}"))
+            using (Benchmark.InMiliseconds().ToOutput(_output, "Just Add: {0}"))
             {
                 foreach (var application in modelsToAdd)
                 {
@@ -105,7 +105,7 @@ namespace Four2n.JustApp.DataAccess.IntegrationTests.Examples
             var ctx = CreateDbContext();
             var modelsToAdd = CreateModelsToAdd(batchSize, ctx);
 
-            using (Benchmark.InMiliseconds().ToOutput(output, "Just Add: {0}"))
+            using (Benchmark.InMiliseconds().ToOutput(_output, "Just Add: {0}"))
             {
                 ctx.Applications.AddRange(modelsToAdd);
                 ctx.SaveChanges();
@@ -124,7 +124,7 @@ namespace Four2n.JustApp.DataAccess.IntegrationTests.Examples
             var ctx = CreateDbContext();
             var modelsToAdd = CreateModelsToAdd(batchSize, ctx);
 
-            using (Benchmark.InMiliseconds().ToOutput(output, "Just Add: {0}"))
+            using (Benchmark.InMiliseconds().ToOutput(_output, "Just Add: {0}"))
             {
                 ctx.Configuration.AutoDetectChangesEnabled = false;
                 foreach (var application in modelsToAdd)
@@ -149,7 +149,7 @@ namespace Four2n.JustApp.DataAccess.IntegrationTests.Examples
             var ctx = CreateDbContext();
             var modelsToAdd = CreateModelsToAdd(batchSize, ctx);
 
-            using (Benchmark.InMiliseconds().ToOutput(output, "Just Add: {0}"))
+            using (Benchmark.InMiliseconds().ToOutput(_output, "Just Add: {0}"))
             {
                 ctx.Configuration.AutoDetectChangesEnabled = false;
                 ctx.Applications.AddRange(modelsToAdd);
@@ -170,7 +170,7 @@ namespace Four2n.JustApp.DataAccess.IntegrationTests.Examples
             var ctx = CreateDbContext();
             var modelsToAdd = CreateModelsToAdd(batchSize, ctx);
 
-            using (Benchmark.InMiliseconds().ToOutput(output, "Just Add: {0}"))
+            using (Benchmark.InMiliseconds().ToOutput(_output, "Just Add: {0}"))
             {
                 ctx.Configuration.AutoDetectChangesEnabled = false;
                 ctx.Configuration.ValidateOnSaveEnabled = false;
@@ -178,7 +178,7 @@ namespace Four2n.JustApp.DataAccess.IntegrationTests.Examples
                 ctx.SaveChanges();
                 ctx.Configuration.ValidateOnSaveEnabled = true;
                 ctx.Configuration.AutoDetectChangesEnabled = true;
-                output.WriteLine(ctx.ChangeTracker.Entries().Count().ToString());
+                _output.WriteLine(ctx.ChangeTracker.Entries().Count().ToString());
             }
         }
 

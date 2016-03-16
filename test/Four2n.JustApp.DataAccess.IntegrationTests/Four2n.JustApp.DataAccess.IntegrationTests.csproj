@@ -82,6 +82,7 @@
     <Compile Include="DatabaseBootstrapFixture.cs" />
     <Compile Include="DatabaseCollection.cs" />
     <Compile Include="Examples\BatchInsertingTests.cs" />
+    <Compile Include="Examples\BatchUpdatingTests.cs" />
     <Compile Include="RollbackFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

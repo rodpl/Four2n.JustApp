@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using Four2n.JustApp.Domain.SharedKernel;
+
 namespace Four2n.JustApp.Domain.Applications
 {
     public class Application
@@ -21,5 +23,7 @@ namespace Four2n.JustApp.Domain.Applications
         public string Name { get; set; }
 
         public IList<ApplicationRental> RentedTo { get; set; }
+
+        public Money BasePrice { get; set; }
     }
 }
